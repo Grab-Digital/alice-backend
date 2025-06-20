@@ -14,7 +14,11 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000', 'http://127.0.0.1:5500'],
+      enabled: true,
+      origin: ['https://alice-portfolioo.netlify.app'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      credentials: true,
     },
   },
   'strapi::poweredBy',

@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-    'users-permissions': {
+    upload: {
         config: {
             provider: 'cloudinary',
             providerOptions: {
@@ -11,6 +11,10 @@ module.exports = ({ env }) => ({
                 upload: {},
                 delete: {},
             },
+        },
+    },
+    'users-permissions': {
+        config: {
             jwtSecret: env('JWT_SECRET'),
         },
     },
